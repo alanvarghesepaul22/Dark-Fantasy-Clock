@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;1,400&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: #2e3033;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+.clock {
+  border: 10px solid #1f2022;
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  position: relative;
+  margin: 2px;
+}
+.secHand {
+  --rotation: 0;
+  background-color: whitesmoke;
+  align-items: center;
+  width: 7px;
+  height: 40%;
+  bottom: 50%;
+  left: 50%;
+  border-radius: 10px;
+  position: absolute;
+  transform-origin: bottom;
+  transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+}
+
+.digClock {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top: 35%;
+  left: 35%;
+  border-radius: 20px;
+  background-color: #1f2022c2;
+  height: 200px;
+  width: 400px;
+}
+.time {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+}
+.dateDetails {
+  display: flex;
+  flex-direction: row;
+  color: whitesmoke;
+  font-size: 25px;
+ margin-top:0px;
+}
+
+.time div {
+  font-size: 90px;
+  color: whitesmoke;
+  height: fit-content;
+}
+
+.dateDetails .day{
+   margin: 0px 20px;
+}
+.dateDetails .month,.date{
+    margin: 0px 3px;
+ }
+
+ .ampm{
+margin-left: 20px;
+ }
+
+@media screen and (max-width: 420px) {
+  .clock {
+    height: 90px;
+    width: 90px;
+    margin: 6px;
+  }
+}
